@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AM Arkitektura</title>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="icon" href="/assets/brand/icon-black.svg" type="image/svg+xml">
+
+  <!-- Home: tira horizontal con TODOS los proyectos (sin tocar site.css) -->
+  <style>
+    .strip{
+      margin: 10px 0 0 0;
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      padding-bottom: 10px;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .strip::-webkit-scrollbar{ height: 8px; }
+    .strip::-webkit-scrollbar-thumb{ background: rgba(0,0,0,.18); border-radius: 10px; }
+    .strip::-webkit-scrollbar-track{ background: transparent; }
+
+    .strip a{
+      flex: 0 0 auto;
+      width: min(520px, 78vw);
+      scroll-snap-align:start;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      overflow:hidden;
+      background:#e6e3dc;
+      cursor: grab;
+    }
+    .strip a:active{ cursor: grabbing; }
+
+    .strip img{
+      width:100%;
+      height: 260px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .home-note{
+      margin-top: 18px;
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .footer{
+      margin-top: 34px;
+      padding-top: 14px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:baseline;
+    }
+    .footer a{ border-bottom: 1px solid transparent; }
+    .footer a:hover{ border-bottom-color: #999; }
+
+    .footer .sep{ opacity: .7; }
+    .footer .legal{ margin-left: auto; display:flex; gap:10px; flex-wrap:wrap; }
+
+    @media (max-width:720px){
+      .strip img{ height: 220px; }
+      .footer{ margin-top: 28px; }
+      .footer .legal{ margin-left: 0; width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="brand">
+        <a href="/">
+          <img src="/assets/brand/logo-black.png" alt="AM Arkitektura">
+          <div class="brand-name">AM.Arkitektura</div>
+        </a>
+      </div>
+
+      <div>
+        <div class="nav">
+          <a href="/es/proyectos/">Proyectos</a>
+          <a href="/es/contacto/">Contacto</a>
+        </div>
+        <div class="lang"><a href="/eu/" class="underline">EU</a> · ES</div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- Tira horizontal con TODOS los proyectos -->
+    <div class="strip" aria-label="Proyectos (desliza horizontalmente)">
+      <a href="/es/proyectos/zuhaizpe/" aria-label="Zuhaizpe">
+        <img src="/assets/img/zuhaizpe/zuhaizpe01.jpg" alt="Zuhaizpe" loading="eager">
+      </a>
+
+      <a href="/es/proyectos/jangela/" aria-label="Jangela">
+        <img src="/assets/img/jangela/jangela11.jpg" alt="Jangela" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/serbi4/" aria-label="Serbi4">
+        <img src="/assets/img/serbi4/serbi407.jpg" alt="Serbi4" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/hondarribi/" aria-label="Hondarribi">
+        <img src="/assets/img/hondarribi/hondarribi01.jpg" alt="Hondarribi" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/28-29/" aria-label="28&29">
+        <img src="/assets/img/28-29/28-2901.jpg" alt="28&29" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/boulevard/" aria-label="Boulevard">
+        <img src="/assets/img/boulevard/boulevard01.jpg" alt="Boulevard" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/dentieder/" aria-label="Dentieder">
+        <img src="/assets/img/dentieder/dentieder01.jpg" alt="Dentieder" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/harrera/" aria-label="Harrera">
+        <img src="/assets/img/harrera/harrera01.jpg" alt="Harrera" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/klein/" aria-label="Klein">
+        <img src="/assets/img/klein/klein01.jpg" alt="Klein" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/o-h/" aria-label="O@H">
+        <img src="/assets/img/o-h/o-h01.jpg" alt="O@H" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/t-e/" aria-label="T-E">
+        <img src="/assets/img/t-e/t-e01.jpg" alt="T-E" loading="lazy">
+      </a>
+
+      <a href="/es/proyectos/arts/" aria-label="Arts">
+        <img src="/assets/img/arts/arts01.jpg" alt="Arts" loading="lazy">
+      </a>
+    </div>
+
+    <p class="home-note">
+      Arquitectura construida.<br>
+      Vivienda, formas de convivencia y cohousing (vivienda colaborativa).
+    </p>
+
+    <footer class="footer">
+      <a href="mailto:info@am-a.eus">info@am-a.eus</a>
+      <span class="sep">·</span>
+      <span>Errenteria, 2 – 20013 Donostia</span>
+
+      <span class="legal">
+        <a href="/es/legal/">Legal</a>
+        <span class="sep">·</span>
+        <a href="/es/privacidad/">Privacidad</a>
+        <span class="sep">·</span>
+        <a href="/es/cookies/">Cookies</a>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+  (function () {
+    function fitWordmark() {
+      const link = document.querySelector('.brand a');
+      if (!link) return;
+
+      const logo = link.querySelector('img');
+      const word = link.querySelector('.brand-name');
+      if (!logo || !word) return;
+
+      const logoW = logo.getBoundingClientRect().width;
+      if (!logoW || logoW < 10) return;
+
+      word.style.width = logoW + 'px';
+
+      const baseSize = parseFloat(getComputedStyle(word).fontSize);
+      word.style.letterSpacing = '0px';
+      word.style.fontSize = baseSize + 'px';
+
+      const text = word.textContent || '';
+      const gaps = Math.max(1, text.length - 1);
+
+      const probe = word.cloneNode(true);
+      probe.style.position = 'absolute';
+      probe.style.visibility = 'hidden';
+      probe.style.width = 'auto';
+      probe.style.letterSpacing = '0px';
+      probe.style.fontSize = baseSize + 'px';
+      document.body.appendChild(probe);
+      const textW = probe.getBoundingClientRect().width;
+      document.body.removeChild(probe);
+
+      if (textW < logoW) {
+        const extra = logoW - textW;
+        const ls = extra / gaps;
+        word.style.letterSpacing = ls.toFixed(2) + 'px';
+        word.style.fontSize = baseSize + 'px';
+        return;
+      }
+
+      if (textW > logoW) {
+        const scale = logoW / textW;
+        const newSize = Math.max(11, baseSize * scale);
+        word.style.fontSize = newSize.toFixed(2) + 'px';
+        word.style.letterSpacing = '0px';
+      }
+    }
+
+    window.addEventListener('load', fitWordmark);
+    window.addEventListener('resize', fitWordmark);
+  })();
+  </script>
+</body>
+</html>
