@@ -3,51 +3,64 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AM Arkitektura</title>
+  <title>Legal — AM Arkitektura</title>
 
   <link rel="stylesheet" href="/assets/css/site.css">
   <link rel="icon" href="/assets/brand/icon-black.svg" type="image/svg+xml">
 
-  <!-- Home: tira horizontal con TODOS los proyectos (sin tocar site.css) -->
   <style>
-    .strip{
-      margin: 10px 0 0 0;
-      display:flex;
-      gap:12px;
-      overflow-x:auto;
-      padding-bottom: 10px;
-      scroll-snap-type:x mandatory;
-      -webkit-overflow-scrolling: touch;
+    .page-head{ margin: 0 0 14px 0; }
+    .page-head h1{
+      margin: 0 0 6px 0;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
     }
-    .strip::-webkit-scrollbar{ height: 8px; }
-    .strip::-webkit-scrollbar-thumb{ background: rgba(0,0,0,.18); border-radius: 10px; }
-    .strip::-webkit-scrollbar-track{ background: transparent; }
-
-    .strip a{
-      flex: 0 0 auto;
-      width: min(520px, 78vw);
-      scroll-snap-align:start;
-      border: 1px solid var(--rule);
-      border-radius: 3px;
-      overflow:hidden;
-      background:#e6e3dc;
-      cursor: grab;
-    }
-    .strip a:active{ cursor: grabbing; }
-
-    .strip img{
-      width:100%;
-      height: 260px;
-      object-fit:cover;
-      display:block;
-    }
-
-    .home-note{
-      margin-top: 18px;
-      font-size: 16px;
+    .page-subtitle{
+      margin: 0 0 10px 0;
       color: var(--muted);
+      font-size: 13px;
       line-height: 1.45;
+      text-transform: none;
     }
+
+    .back{
+      display:inline-block;
+      margin: 0 0 14px 0;
+      color: var(--muted);
+      font-size: 13px;
+      border-bottom: 1px solid transparent;
+    }
+    .back:hover{ border-bottom-color:#999; }
+
+    .legal-text{
+      color: var(--fg);
+      opacity: .88;
+      line-height: 1.55;
+      max-width: 75ch;
+      margin: 18px 0 10px 0;
+    }
+    .legal-text p{ margin: 0 0 10px 0; }
+    .legal-text h2{
+      margin: 18px 0 8px 0;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      opacity: .95;
+    }
+    .legal-text ul{ margin: 0 0 10px 18px; padding: 0; }
+    .legal-text li{ margin: 0 0 6px 0; }
+
+    .legal-meta{
+      margin: 12px 0 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .legal-meta .sep{ opacity:.7; }
 
     .footer{
       margin-top: 34px;
@@ -60,16 +73,13 @@
       gap:10px;
       align-items:baseline;
     }
-    .footer a{ border-bottom: 1px solid transparent; }
-    .footer a:hover{ border-bottom-color: #999; }
-
-    .footer .sep{ opacity: .7; }
-    .footer .legal{ margin-left: auto; display:flex; gap:10px; flex-wrap:wrap; }
-
+    .footer a{ border-bottom:1px solid transparent; }
+    .footer a:hover{ border-bottom-color:#999; }
+    .footer .sep{ opacity:.7; }
+    .footer .legal{ margin-left:auto; display:flex; gap:10px; flex-wrap:wrap; }
     @media (max-width:720px){
-      .strip img{ height: 220px; }
       .footer{ margin-top: 28px; }
-      .footer .legal{ margin-left: 0; width: 100%; }
+      .footer .legal{ margin-left:0; width:100%; }
     }
   </style>
 </head>
@@ -78,7 +88,7 @@
   <div class="wrap">
     <div class="header">
       <div class="brand">
-        <a href="/">
+        <a href="/es/">
           <img src="/assets/brand/logo-black.png" alt="AM Arkitektura">
           <div class="brand-name">AM.Arkitektura</div>
         </a>
@@ -89,67 +99,58 @@
           <a href="/es/proyectos/">Proyectos</a>
           <a href="/es/contacto/">Contacto</a>
         </div>
-        <div class="lang"><a href="/eu/" class="underline">EU</a> · ES</div>
+        <div class="lang">ES · <a href="/eu/legala/" class="underline">EU</a></div>
       </div>
     </div>
 
     <div class="rule"></div>
 
-    <!-- Tira horizontal con TODOS los proyectos -->
-    <div class="strip" aria-label="Proyectos (desliza horizontalmente)">
-      <a href="/es/proyectos/zuhaizpe/" aria-label="Zuhaizpe">
-        <img src="/assets/img/zuhaizpe/zuhaizpe01.jpg" alt="Zuhaizpe" loading="eager">
-      </a>
+    <a class="back" href="/es/">← Inicio</a>
 
-      <a href="/es/proyectos/jangela/" aria-label="Jangela">
-        <img src="/assets/img/jangela/jangela11.jpg" alt="Jangela" loading="lazy">
-      </a>
+    <div class="page-head">
+      <h1>Legal</h1>
+      <div class="page-subtitle">Aviso legal y condiciones de uso del sitio web.</div>
 
-      <a href="/es/proyectos/serbi4/" aria-label="Serbi4">
-        <img src="/assets/img/serbi4/serbi407.jpg" alt="Serbi4" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/hondarribi/" aria-label="Hondarribi">
-        <img src="/assets/img/hondarribi/hondarribi01.jpg" alt="Hondarribi" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/28-29/" aria-label="28&29">
-        <img src="/assets/img/28-29/28-2901.jpg" alt="28&29" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/boulevard/" aria-label="Boulevard">
-        <img src="/assets/img/boulevard/boulevard01.jpg" alt="Boulevard" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/dentieder/" aria-label="Dentieder">
-        <img src="/assets/img/dentieder/dentieder01.jpg" alt="Dentieder" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/harrera/" aria-label="Harrera">
-        <img src="/assets/img/harrera/harrera01.jpg" alt="Harrera" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/klein/" aria-label="Klein">
-        <img src="/assets/img/klein/klein01.jpg" alt="Klein" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/o-h/" aria-label="O@H">
-        <img src="/assets/img/o-h/o-h01.jpg" alt="O@H" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/t-e/" aria-label="T-E">
-        <img src="/assets/img/t-e/t-e01.jpg" alt="T-E" loading="lazy">
-      </a>
-
-      <a href="/es/proyectos/arts/" aria-label="Arts">
-        <img src="/assets/img/arts/arts01.jpg" alt="Arts" loading="lazy">
-      </a>
+      <div class="legal-meta">
+        <span>Actualizado: <time datetime="2026-01-31">31/01/2026</time></span>
+        <span class="sep">·</span>
+        <span>Titular: Alex Mitxelena</span>
+      </div>
     </div>
 
-    <p class="home-note">
-      Arquitectura construida.<br>
-      Vivienda, formas de convivencia y cohousing (vivienda colaborativa).
-    </p>
+    <div class="legal-text">
+      <h2>1. Titularidad del sitio web</h2>
+      <p>En cumplimiento del deber de información, se facilitan los siguientes datos del titular de este sitio web:</p>
+      <ul>
+        <li><strong>Titular:</strong> Alex Mitxelena</li>
+        <li><strong>Nombre comercial:</strong> AM Arkitektura</li>
+        <li><strong>Correo de contacto:</strong> <a href="mailto:info@am-a.eus">info@am-a.eus</a></li>
+        <li><strong>Domicilio de contacto:</strong> Errenteria, 2 – 20013 Donostia</li>
+        <li><strong>Dominio:</strong> am-a.eus</li>
+      </ul>
+      <p>No se publica DNI/NIF en esta web por motivos de privacidad y minimización de datos.</p>
+
+      <h2>2. Condiciones de uso</h2>
+      <p>El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación de estas condiciones. El usuario se compromete a hacer un uso adecuado de los contenidos y servicios y a no emplearlos para actividades ilícitas, ilegales o contrarias a la buena fe y al orden público.</p>
+
+      <h2>3. Propiedad intelectual e industrial</h2>
+      <p>Salvo que se indique lo contrario, los contenidos del sitio (textos, imágenes, fotografías, diseño, logotipos, etc.) están protegidos por derechos de propiedad intelectual e industrial y pertenecen al titular o a terceros con licencia/autoría indicada. Queda prohibida su reproducción, distribución o comunicación pública sin autorización expresa, excepto en los casos permitidos por la ley.</p>
+
+      <h2>4. Enlaces</h2>
+      <p>Este sitio puede incluir enlaces a páginas de terceros. El titular no se responsabiliza del contenido, políticas o prácticas de dichos sitios externos.</p>
+
+      <h2>5. Responsabilidad</h2>
+      <p>El titular procura que la información sea correcta y esté actualizada, pero no garantiza la inexistencia de errores o interrupciones. El uso del sitio es responsabilidad del usuario. El titular no se hace responsable de daños derivados del uso del sitio o de la imposibilidad de acceso por causas ajenas.</p>
+
+      <h2>6. Modificaciones</h2>
+      <p>El titular se reserva el derecho a modificar, en cualquier momento y sin previo aviso, la presentación, configuración y contenidos del sitio, así como este aviso legal.</p>
+
+      <h2>7. Legislación aplicable y jurisdicción</h2>
+      <p>Este aviso legal se rige por la legislación española. Para la resolución de cualquier controversia, las partes se someten a los juzgados y tribunales que resulten competentes conforme a la normativa aplicable.</p>
+
+      <h2>8. Contacto</h2>
+      <p>Para cualquier consulta sobre este aviso legal, puedes escribir a <a href="mailto:info@am-a.eus">info@am-a.eus</a>.</p>
+    </div>
 
     <footer class="footer">
       <a href="mailto:info@am-a.eus">info@am-a.eus</a>
@@ -167,11 +168,11 @@
   </div>
 
   <script>
-  (function () {
-    function fitWordmark() {
+  // Wordmark auto-fit (AM.Arkitektura)
+  (function fitWordmark() {
+    function run(){
       const link = document.querySelector('.brand a');
       if (!link) return;
-
       const logo = link.querySelector('img');
       const word = link.querySelector('.brand-name');
       if (!logo || !word) return;
@@ -200,22 +201,18 @@
 
       if (textW < logoW) {
         const extra = logoW - textW;
-        const ls = extra / gaps;
-        word.style.letterSpacing = ls.toFixed(2) + 'px';
-        word.style.fontSize = baseSize + 'px';
+        word.style.letterSpacing = (extra / gaps).toFixed(2) + 'px';
         return;
       }
 
       if (textW > logoW) {
         const scale = logoW / textW;
-        const newSize = Math.max(11, baseSize * scale);
-        word.style.fontSize = newSize.toFixed(2) + 'px';
+        word.style.fontSize = Math.max(11, baseSize * scale).toFixed(2) + 'px';
         word.style.letterSpacing = '0px';
       }
     }
-
-    window.addEventListener('load', fitWordmark);
-    window.addEventListener('resize', fitWordmark);
+    window.addEventListener('load', run);
+    window.addEventListener('resize', run);
   })();
   </script>
 </body>
